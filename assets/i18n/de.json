@@ -1,0 +1,11 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "projects": "Projekte",
+    "faqs": "FAQs",
+    "contact": "Kontakt",
+    "more": "Mehr",
+    "gallery": "Galerie"
+  }
+}
