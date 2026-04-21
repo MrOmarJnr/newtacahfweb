@@ -5928,3 +5928,87 @@ body {
 .ul-gallery-item:hover img {
   transform: scale(1.08);
 }
+
+
+
+
+/* Mega menu container */
+.mega-menu {
+    display: none;
+    position: absolute;
+    top: 120%;
+    left: 0;
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+.has-sub-menu:hover .mega-menu {
+    display: flex;
+}
+
+/* Columns */
+.mega-column {
+    flex: 1;
+}
+
+.mega-column h4 {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #0d6efd;
+}
+
+.mega-column ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.mega-column ul li a {
+    display: block;
+    padding: 6px 0;
+    font-size: 13px;
+    color: #333;
+    text-decoration: none;
+}
+
+.mega-column ul li a:hover {
+    color: #0d6efd;
+}
+
+/* Keep dropdown attached to parent */
+.has-sub-menu {
+    position: relative;
+}
+
+/* FIX GAP + smoother hover */
+.mega-menu {
+    position: absolute;
+    top: 100%; /* IMPORTANT: was 120%, this removes the gap */
+    left: 0;
+
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    padding: 20px;
+
+    display: flex;
+    gap: 30px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+/* SHOW on hover */
+.has-sub-menu:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
